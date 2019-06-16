@@ -25,9 +25,9 @@ def insert_list_BST(level, array):
         else:
             mid_index = math.floor(len(array) / 2)
             root_node = BinaryTreeNode(level, array[mid_index])
-
-        print('array[0: mid_index] is ' + str(array[0: mid_index]))
-        print('array[mid_index+1:] is ' + str(array[mid_index+1:]))
+        #
+        # print('array[0: mid_index] is ' + str(array[0: mid_index]))
+        # print('array[mid_index+1:] is ' + str(array[mid_index+1:]))
 
         root_node.add_left_child(insert_list_BST(level+1, array[0: mid_index]))
         root_node.add_right_child(insert_list_BST(level+1, array[mid_index+1:]))
