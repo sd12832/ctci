@@ -45,6 +45,14 @@ class Test(unittest.TestCase):
         result_tree.pre_order_array_creator(result_tree.root, tree_array)
         self.assertEqual(array, tree_array)
 
+    def test_basic_even_case(self):
+        array = [1, 4, 5, 8, 11, 15, 18, 20]
+        result_tree = BinaryTree(insert_list_BST(0, array))
+        # result_tree.pre_order_print_node()
+        tree_array = []
+        result_tree.pre_order_array_creator(result_tree.root, tree_array)
+        self.assertEqual(array, tree_array)
+
 
 if __name__ == '__main__':
     unittest.main()
